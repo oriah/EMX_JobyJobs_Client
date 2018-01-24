@@ -1,0 +1,19 @@
+.rtl .mat-form-field {
+  text-align: right !important;
+}
+
+.rtl .mat-form-field-prefix {
+  margin-left: 8px !important;
+}
+
+.rtl .mat-option-text {
+  margin-right: 8px;
+}
+
+.rtl .mat-menu-item {
+  text-align: right !important;
+}
+
+.rtl .mat-checkbox-layout .mat-checkbox-label {
+  margin-right: 8px;
+}

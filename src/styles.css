@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+textarea {
+  height: 225px;
+  border: 1px solid rgba(0,0,0,.54) !important;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.image-upload {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-upload > .remove-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 22px;
+  padding: 5px;
+  background-color: #fff;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/*--- Material ---*/
+
+.mat-input-element {
+  padding: 8px;
+  border: 1px solid rgba(0,0,0,.54);
+}
+
+.mat-form-field-type-mat-select .mat-form-field-label {
+  width: 100% !important;
+}
+
+.mat-dialog-title {
+  font-size: 26px;
+}
+
+.ltr .mat-form-field-prefix {
+  margin-right: 8px !important;
+}
+
+.textarea .mat-form-field-label {
+  top: 27px !important;
+  left: -6px !important;
+}
