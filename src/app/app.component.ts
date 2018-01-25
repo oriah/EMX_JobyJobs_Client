@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TranslationService } from './shared/_services/translation.service';
+import { TranslationService } from './shared/_services/generic/translation.service';
 
 import { Locale } from './shared/_generic/locale';
 

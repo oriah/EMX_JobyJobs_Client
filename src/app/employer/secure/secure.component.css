@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 #topHeader {
   padding: 12px;
   background-color: #2d3740;
@@ -31,6 +37,12 @@
 }
 
 .breadcrumb {
+  margin: 0;
   border-top: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
+}
+
+#content {
+  flex: 1;
+  background-color: #efefef;
 }

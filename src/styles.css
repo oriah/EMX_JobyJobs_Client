@@ -1,3 +1,9 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 textarea {
   height: 225px;
   border: 1px solid rgba(0,0,0,.54) !important;
@@ -41,6 +47,10 @@ input[type=file] {
 
 .bold {
   font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .card-title {

@@ -1,18 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UserSessionService } from '../../../shared/_services/generic/user-session.service';
+import { AppHttpService } from '../../../shared/_services/employer/app-http.service';
+import {User} from '../../../shared/_models/user.model';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  username: string;
-  password: string;
+  user = new User();
+
   rememberMe: boolean;
 
-  constructor() {}
+  isLoginFailed = false;
+  isLoggingIn = false;
 
-  ngOnInit() {}
+  constructor(private router: Router, private userSession: UserSessionService, private appHttp: AppHttpService) {}
+
+  submit(isValid: boolean) {
+    if (isValid) {
+      this.isLoginFailed = false;
+      this.isLoggingIn = true;
+
+      this.appHttp.login(this.user.username, this.user.password)
+      .then((response) => setTimeout(() => this.handleResponse(response), 2000));
+    }
+  }
+
+  private handleResponse(token: string): void {
+    if (token) {
+      this.user.token = token;
+      this.userSession.login(this.user, this.rememberMe);
+      this.router.navigate(['..']);
+    } else {
+      this.isLoginFailed = true;
+      this.isLoggingIn = false;
+    }
+
+  }
 
 }

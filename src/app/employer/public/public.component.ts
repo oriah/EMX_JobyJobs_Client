@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { TranslationService } from '../../shared/_services/translation.service';
+import { TranslationService } from '../../shared/_services/generic/translation.service';
 
 @Component({
   selector: 'app-public',

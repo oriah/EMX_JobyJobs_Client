@@ -5,7 +5,7 @@ import { EmployerModule } from './employer/employer.module';
 
 import { AppComponent } from './app.component';
 
-import { TranslationService } from './shared/_services/translation.service';
+import { TranslationService } from './shared/_services/generic/translation.service';
 
 import { APP_ROUTES } from './shared/_routes/app.routes';
 

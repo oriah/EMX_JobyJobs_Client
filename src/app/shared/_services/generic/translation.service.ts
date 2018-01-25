@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Subject } from 'rxjs/Subject';
 
-import { Locale } from '../_generic/locale';
+import { Locale } from '../../_generic/locale';
 
 @Injectable()
 export class TranslationService {

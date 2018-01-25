@@ -6,6 +6,36 @@
   text-align: right;
 }
 
+.rtl .mr-1 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+.rtl .ml-1 {
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+
+.rtl .mr-5 {
+  margin-right: 0;
+  margin-left: 3rem;
+}
+
+.rtl .ml-5 {
+  margin-right: 3rem;
+  margin-left: 0;
+}
+
+.rtl .pr-5 {
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+.rtl .pl-5 {
+  padding-right: 3rem;
+  padding-left: 0;
+}
+
 .rtl .offset-1 {
   margin-right: 8.333333%;
   margin-left: 0;

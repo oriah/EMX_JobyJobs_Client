@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TranslationService } from '../../shared/_services/translation.service';
-import { BreadcrumbService } from '../../shared/_services/breadcrumbs.service';
+import { TranslationService } from '../../shared/_services/generic/translation.service';
+import { BreadcrumbService } from '../../shared/_services/generic/breadcrumbs.service';
 
 import { Breadcrumb } from '../../shared/_generic/breadcrumbs';
 
@@ -12,13 +12,19 @@ import { Breadcrumb } from '../../shared/_generic/breadcrumbs';
 })
 export class SecureComponent implements OnInit {
 
+  readonly menuLinks = [
+    { label: 'לוח הבקרה', url: 'dashboard' }, { label: 'משרות', url: 'positions' },
+    { label: 'ראיונות', url: 'interviews' }, { label: 'הודעות', url: 'messages' },
+    { label: 'פרופיל', url: 'profile' }
+  ];
+
   lang: string;
   breadcrumbs: Breadcrumb[];
 
-  constructor(private translationService: TranslationService, private breadcrumbs: BreadcrumbService) {}
+  constructor(private translationService: TranslationService, private breadcrumbsService: BreadcrumbService) {}
 
   ngOnInit() {
-    this.breadcrumbs.breadcrumbSubject.subscribe(message => console.log(message));
+    this.breadcrumbsService.breadcrumbSubject.subscribe(message => this.breadcrumbs = message);
     this.lang = this.translationService.locale.lang;
   }
 

@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { PositionsComponent } from '../../employer/secure/positions/positions.component';
+import { DashboardComponent } from '../../employer/secure/dashboard/dashboard.component';
 
 export const EMPLOYER_SECURE_ROUTES: Routes = [
-  { path: 'positions', component: PositionsComponent }
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent }
 ];

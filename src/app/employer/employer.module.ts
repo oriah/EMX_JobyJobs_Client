@@ -4,15 +4,7 @@ import { RouterModule } from '@angular/router';
 import { PublicModule } from './public/public.module';
 import { SecureModule } from './secure/secure.module';
 
-import { EmployerComponent } from './employer.component';
-
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    PublicModule,
-    SecureModule
-  ],
-  declarations: [EmployerComponent]
+  imports: [CommonModule, RouterModule, PublicModule, SecureModule]
 })
 export class EmployerModule {}
