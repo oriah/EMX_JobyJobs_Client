@@ -1,0 +1,19 @@
+#topFooter {
+  padding: 30px 0;
+}
+
+#topFooter a, #bottomFooter {
+  color: #858585;
+}
+
+#bottomFooter {
+  padding: 12px 0;
+  background-color: #f5f4f5;
+}
+
+
+@media (max-width: 596px) {
+  #bottomFooter {
+    font-size: 12px;
+  }
+}

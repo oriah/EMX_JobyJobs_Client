@@ -17,3 +17,17 @@
 .rtl .mat-checkbox-layout .mat-checkbox-label {
   margin-right: 8px;
 }
+
+.rtl .mat-form-field-infix, .rtl .mat-option {
+  text-align: right;
+}
+
+.rtl .mat-dialog-container {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr .mat-dialog-container {
+  direction: ltr;
+  text-align: left;
+}

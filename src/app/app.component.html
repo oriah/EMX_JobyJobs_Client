@@ -1,3 +1,7 @@
-<div [class]="locale.direction">
-  <router-outlet></router-outlet>
+<div [class]="'wrapper ' + langDirection">
+  <app-header [lang]="lang" (langChanged)="changeLocale($event)"></app-header>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>

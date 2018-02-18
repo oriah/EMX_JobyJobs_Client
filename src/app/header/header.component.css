@@ -1,0 +1,103 @@
+.navbar {
+  padding: 0;
+}
+
+#pageTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url('/assets/img/page-title.jpg');
+}
+
+#pageTitle::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: rgba(44, 55, 62, 0.8);
+}
+
+#pageTitleHeading, #pageTitleContent {
+  color: #fff;
+  z-index: 2;
+}
+
+#pageTitleHeading {
+  padding: 15px;
+}
+
+#pageTitleContent {
+  width: 100%;
+  padding: 120px 0;
+  text-align: center;
+}
+
+#pageTitleContent h1 {
+  font-size: 48px;
+}
+
+#pageTitleContent h2 {
+  font-size: 24px;
+}
+
+#mainSearchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.main-search-container-input {
+  background-color: #fff;
+  height: 45px;
+  padding: 0 18px;
+}
+
+.main-search-container-input > i {
+  color: #008def;
+  font-size: 18px;
+}
+
+.main-search-container-input > input, .main-search-container-input > .mat-select {
+  height: 100%;
+  width: 250px;
+  border: none;
+  outline: none;
+}
+
+.main-search-container-input ::-webkit-input-placeholder, .main-search-container-input ::ng-deep .mat-select-placeholder {
+  color: #000;
+}
+
+.main-search-container-input ::ng-deep .mat-select-trigger {
+  height: 100%;
+}
+
+.main-search-container-input ::ng-deep .mat-select-value {
+  vertical-align: middle;
+}
+
+#mainSearchContainer button {
+  width: 115px;
+  text-transform: uppercase;
+  background-color: #008def;
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    position: static;
+    padding: 8px 10px;
+    border: 2px solid #008def;
+    border-radius: 6px;
+  }
+
+  .navbar-toggler > i {
+    color: #008def;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    padding: 0 18px;
+  }
+}

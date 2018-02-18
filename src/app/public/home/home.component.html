@@ -1,0 +1,104 @@
+<section id="categories" class="container">
+  <p class="section-title mb-5">{{ 'BROWSE_JOBS_BY_CATEGORY' | t }}</p>
+  <div class="row">
+    <a class="col-12 col-sm-6 col-md-3 text-center category" *ngFor="let category of categories; let index = index">
+      <img [src]="'/assets/img/categories/category' + (index + 1) + '.png'" class="mb-3">
+      <p>{{ category.text | uppercase | t }}</p>
+      <p class="category-count">(1298)</p>
+    </a>
+  </div>
+</section>
+<div id="addResumeBanner" class="container">
+  <p class="h4">{{ 'ADD_YOUR_RESUME_S' | t }}</p>
+  <button class="chip-button chip-blue toggle-effect text-uppercase">{{ 'ADD_YOUR_RESUME' | t }}</button>
+</div>
+<section id="highlightJobs" class="container">
+  <p class="section-title mb-5">{{ 'JOB_YOU_MAY_S' | t}}</p>
+  <mat-chip-list class="mb-5">
+    <mat-chip class="chip-button fade-effect" [ngClass]="{ 'chip-blue': activeHighlightCategory === 'hot', 'chip-default': activeHighlightCategory !== 'hot' }"
+              (click)="activeHighlightCategory = 'hot'">{{ 'HOT_JOBS' | t }}
+    </mat-chip>
+    <mat-chip class="chip-button fade-effect ml-3" [ngClass]="{ 'chip-blue': activeHighlightCategory === 'recent', 'chip-default': activeHighlightCategory !== 'hot' }"
+              (click)="activeHighlightCategory = 'recent'">{{ 'RECENT_JOBS' | t }}
+    </mat-chip>
+    <mat-chip class="chip-button fade-effect ml-3" [ngClass]="{ 'chip-blue': activeHighlightCategory === 'popular', 'chip-default': activeHighlightCategory !== 'hot' }"
+              (click)="activeHighlightCategory = 'popular'">{{ 'POPULAR_JOBS' | t }}
+    </mat-chip>
+  </mat-chip-list>
+  <div class="row mt-5">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let job of jobs">
+      <app-job-list-item [job]="job"></app-job-list-item>
+    </div>
+  </div>
+</section>
+<section id="steps">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="/assets/img/home/step-1.png">
+        <p class="mt-3 step-number">01 {{ 'STEPS' | t }}</p>
+        <p class="mb-4 step-title">{{ 'REGISTER_AN_ACCOUNT' | t }}</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry.</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="/assets/img/home/step-2.png">
+        <p class="mt-3 step-number">02 {{ 'STEPS' | t }}</p>
+        <p class="mb-4 step-title">{{ 'SEARCH_YOUR_DESIRED_JOB' | t }}</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry.</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="/assets/img/home/step-3.png">
+        <p class="mt-3 step-number">03 {{ 'STEPS' | t }}</p>
+        <p class="mb-4 step-title">{{ 'SEND_YOUR RESUME_S' | t }}</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="counters" class="container">
+  <div class="row">
+    <div class="col-12 col-sm-4">
+      <div class="counter">
+        <img src="/assets/img/home/counter-1.png">
+        <p class="h3 mt-3">{{ counters['jobs'] }}</p>
+        <p class="mt-3 mb-3">{{ 'LIVE_JOBS' | t }}</p>
+        <p class="counter-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="counter">
+        <img src="/assets/img/home/counter-2.png">
+        <p class="h3 mt-3">{{ counters['employers'] }}</p>
+        <p class="mt-3 mb-3">{{ 'TOTAL_COMPANY' | t }}</p>
+        <p class="counter-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="counter">
+        <img src="/assets/img/home/counter-3.png">
+        <p class="h3 mt-4">{{ counters['seekers'] }}</p>
+        <p class="mt-3 mb-3">{{ 'TOTAL_CANDIDATE' | t }}</p>
+        <p class="counter-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="homeApps">
+  <div class="container">
+    <p class="section-title mb-5">{{ 'DOWNLOAD_ON_APP_STORE' | t }}</p>
+    <div id="appsRow" class="row">
+      <div class="col-12 col-sm-4" *ngFor="let app of availableOnApps; let index = index">
+        <div class="app-item">
+          <img [src]="'/assets/img/home/app-' + (index + 1) +'.png'" class="mr-3">
+          <div>
+            <p>{{ 'AVAILABLE_ON' | t }}</p>
+            <p class="h3">{{ app }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

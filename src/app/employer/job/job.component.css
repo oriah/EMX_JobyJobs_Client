@@ -1,0 +1,13 @@
+.job-details {
+  width: 70%;
+  text-align: start !important;
+}
+
+.seeker-counts {
+  width: 15%;
+}
+
+.viewed-seeker-counts {
+  font-size: 12px;
+  font-family: HeeboBold !important;
+}

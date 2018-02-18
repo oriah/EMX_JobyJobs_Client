@@ -1,0 +1,57 @@
+.data-table table {
+  box-shadow: -1px 6px 20px 2px #999;
+}
+
+.data-table-actions {
+  margin-bottom: 20px;
+}
+
+.data-table-action {
+  padding: 8px 12px;
+  background: #356cb3;;
+  border: 1px solid #356cb3;;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.saved-message > i {
+    font-size: 22px;
+}
+
+.saved-message > span {
+    vertical-align: top;
+}
+
+.data-table th, .data-table td {
+  vertical-align: middle;
+}
+
+.data-table th {
+  background-color: #3e3e3e;
+  color: #fff;
+  text-align: center !important;
+}
+
+.headers th > i {
+  margin-top: 4px;
+}
+
+.data-table .row-actions {
+  width: 150px;
+}
+
+.data-table td {
+  text-align: center;
+}
+
+.data-table .row-actions > a {
+  text-decoration: none;
+}
+
+.data-table .row-icon {
+  cursor: pointer;
+  width: 20px;
+}

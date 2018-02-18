@@ -1,0 +1,21 @@
+.form-container {
+  padding: 0 !important;
+}
+
+.form-container > form {
+  padding: 20px 30px;
+}
+
+.tab {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  color: #000;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.tab:hover, .tab.active {
+  border-color: transparent;
+  background-color: #008def;
+  color: #fff;
+}

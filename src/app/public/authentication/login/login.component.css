@@ -1,0 +1,20 @@
+#usernameInputContainer {
+  margin-bottom: 20px;
+}
+
+::ng-deep .mat-checkbox-layout {
+  margin: 0;
+}
+
+::ng-deep .mat-checkbox-frame {
+  border-radius: 10px !important;
+  border-color: #cdcddc;
+}
+
+::ng-deep .mat-checkbox-background {
+  border-radius: 10px !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #008def;
+}
